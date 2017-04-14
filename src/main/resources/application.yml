@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: payment
+
+payment.service:
+  pollingInMil: 10000
+  initialFile: #TO BE OVERRIDEN#
+  exchangeRate: {"AUD":1.2,"HKD":6.5,"CNY":6.0}
+  
+  
+---
+spring:
+  profiles: test
+
+payment.service:
+  initialFile: classpath:initial.txt
